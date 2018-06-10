@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour {
 
 		Plane plane = new Plane(Vector3.up, transform.position);
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		float distance = 100;
+		float distance = 1000;
 		if (plane.Raycast (ray, out distance)) {
 			Vector3 hitPoint = ray.GetPoint (distance);
 			Vector3 projectionPoint = new Vector3 (hitPoint.x, 0.0f, hitPoint.z);
